@@ -1,0 +1,14 @@
+.Indicator {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--yellow);
+	border-radius: 50%;
+	border: 1px solid var(--primary);
+	width: var(--i-xs);
+	height: var(--i-xs);
+	color: var(--primary);
+}

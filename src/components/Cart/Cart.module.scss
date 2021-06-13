@@ -1,0 +1,16 @@
+.Cart {
+	position: relative;
+
+	a {
+		display: inline-block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	svg {
+		display: block;
+		height: var(--i-m);
+		width: var(--i-m);
+	}
+}

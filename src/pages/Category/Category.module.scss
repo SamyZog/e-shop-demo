@@ -1,0 +1,31 @@
+.Category {
+	height: var(--body-h);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+
+	aside {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		flex: 1;
+		background-color: blue;
+	}
+
+	.showcase {
+		flex: 5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(3, 30rem);
+			grid-template-rows: 1fr;
+			gap: var(--g-l);
+			list-style-type: none;
+		}
+	}
+}

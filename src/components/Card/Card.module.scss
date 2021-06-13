@@ -1,0 +1,29 @@
+.Card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--primary-common);
+	gap: var(--g-s);
+	color: var(--secondary-common);
+	text-align: center;
+	padding: var(--p-s);
+	border-radius: var(--br);
+
+	img {
+		object-fit: contain;
+		height: 14rem;
+	}
+
+	h4 {
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 30ch;
+		text-overflow: ellipsis;
+	}
+
+	h3 {
+		color: var(--special);
+	}
+}

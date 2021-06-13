@@ -1,0 +1,40 @@
+.Home {
+	height: var(--body-h);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	nav {
+		width: inherit;
+		height: inherit;
+		ul {
+			height: inherit;
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			li {
+				flex: 1;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				a {
+					background-color: var(--primary);
+					display: inline-block;
+					color: var(--secondary);
+					padding: var(--p-m);
+					text-decoration: none;
+					border-radius: var(--br);
+				}
+			}
+		}
+	}
+}

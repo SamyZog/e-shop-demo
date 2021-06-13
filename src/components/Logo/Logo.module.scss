@@ -1,0 +1,16 @@
+.Logo {
+	display: inline-block;
+	height: 100%;
+
+	a {
+		height: inherit;
+		display: inline-block;
+
+		svg {
+			display: block;
+			height: inherit;
+			width: 100%;
+			fill: red;
+		}
+	}
+}

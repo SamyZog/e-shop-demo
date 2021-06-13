@@ -1,13 +1,16 @@
 import { useEffect } from "react";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
 
 function App() {
-	useEffect(() => {
-		fetch("https://fakestoreapi.com/products/categories")
-			.then((res) => res.json())
-			.then((res) => console.log(res));
-	}, []);
+	useEffect(() => {}, []);
 
-	return <></>;
+	return (
+		<>
+			<Header />
+			<Main />
+		</>
+	);
 }
 
 export default App;
