@@ -1,20 +1,34 @@
 .Category {
 	min-height: var(--body-h);
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: var(--primary);
 	padding: var(--p-l);
 
-	&__list {
-		max-width: 100vw;
-		list-style-type: none;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-		gap: var(--g-m);
-		padding: var(--g-m) 0;
+	&__banner {
+		min-width: 250px;
+		height: var(--i-xl);
+		background-color: var(--secondary);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	&__listitem {
+	&__heading {
+		color: var(--dark);
+		font-size: var(--t-m);
+	}
+
+	&__listContainer {
+		padding: var(--g-l) 0;
+	}
+
+	&__list {
+		background-color: var(--primary);
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--g-l);
+	}
+
+	&__listItem {
 	}
 }

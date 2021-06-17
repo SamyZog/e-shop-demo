@@ -1,0 +1,41 @@
+button {
+	height: var(--i-m);
+	border: none;
+	cursor: pointer;
+
+	svg {
+		height: var(--i-s);
+		width: var(--i-s);
+		fill: var(--light);
+	}
+}
+
+.AddButton {
+	background-color: var(--green);
+	color: var(--dark);
+
+	svg {
+		fill: var(--dark);
+	}
+}
+
+.RemoveButton {
+	background-color: var(--red);
+	width: var(--i-m);
+}
+
+.ClearButton {
+	background-color: var(--red);
+}
+
+.FavoriteButton {
+	width: var(--i-m);
+	background-color: var(--dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		fill: var(--light);
+	}
+}

@@ -5,6 +5,7 @@ const data = {
 	text: {
 		about: "about",
 		contact: "contact",
+		currency: "$",
 	},
 	placeholders: {
 		search: "search...",
@@ -24,6 +25,7 @@ const data = {
 		category: "/category",
 		checkout: "/checkout",
 		about: "/about",
+		contact: "/contact",
 	},
 };
 

@@ -11,7 +11,7 @@ function Logo(props) {
 		<div className={styles.Logo}>
 			<Link to={data.links.home}>
 				<Shop />
-				<h2>SHOPITO</h2>
+				<h1>SHOPITO</h1>
 			</Link>
 		</div>
 	);

@@ -1,91 +1,62 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { isInLs, updateLs } from "../utils/localStorage";
 
 const cartContext = createContext();
 const { Provider: Cart } = cartContext;
 
 function CartProvider(props) {
-	const [products, setProducts] = useState([]);
-	const [totalQty, setTotalQty] = useState(0);
-	const [total, setTotal] = useState(0);
+	const [cartItems, setCartItems] = useState([]);
 
-	const getItemById = (product) => {
-		// check to see if the item already exists inside the state array
-		return products.find((el) => el.id === product.id);
+	const clearCart = () => {
+		setCartItems([]);
 	};
 
-	useEffect(() => {
-		const cachedCart = localStorage.getItem("shopito-cart");
-		if (cachedCart) {
-			const cachedObject = JSON.parse(cachedCart);
-			setProducts(cachedObject);
+	const deleteItemFromCart = (item) => {
+		setCartItems((state) => state.filter((el) => el.id !== item.id));
+	};
+
+	const addItem = (item) => {
+		const isInCart = cartItems.find((el) => el.id === item.id);
+		if (isInCart) {
+			isInCart.qty = (isInCart.qty || 0) + 1;
+			setCartItems((state) => [...state]);
+			return;
 		}
-	}, []);
-
-	useEffect(() => {
-		localStorage.setItem("shopito-cart", JSON.stringify(products));
-	}, [products]);
-
-	const deleteItem = (product) => {
-		// if the qty is 0, we delete the item from the state array
-		setProducts((state) => {
-			return state.filter((el) => el.id !== product.id);
+		const copy = { ...item };
+		copy.qty = 1;
+		setCartItems((state) => {
+			return [...state, copy];
 		});
 	};
 
-	const clearCart = () => {
-		setProducts([]);
-	};
-
-	const setManualQty = (product, qty) => {
-		// works with items that are already inside the cart
-		const item = getItemById(product);
-		item.qty = qty;
-		// intentional re-render so the indicator updates
-		setProducts([...products]);
-	};
-
-	const addItem = (product) => {
-		const isFound = getItemById(product);
-		if (isFound) {
-			// if the item exists we just update it's qty
-			isFound.qty += 1;
-			// intentional re-render so the indicator updates
-			setProducts([...products]);
-		} else {
-			// if the item does not exist, we copy it, add the initial qty and push it to the products array
-			const copy = { ...product };
-			copy.qty = 1;
-			setProducts((state) => {
-				return [...state, copy];
-			});
+	const removeItem = (item) => {
+		const isInCart = cartItems.find((el) => el.id === item.id);
+		isInCart.qty = (isInCart.qty || 0) - 1;
+		if (isInCart.qty === 0) {
+			deleteItemFromCart(item);
+			return;
 		}
+		setCartItems((state) => [...state]);
 	};
 
-	const removeItem = (product) => {
-		const isFound = getItemById(product);
-		if (isFound) {
-			// if the item exists we just update it's qty
-			isFound.qty -= 1;
-			if (isFound.qty === 0) {
-				deleteItem(isFound);
-			} else {
-				// intentional re-render so the indicator updates
-				setProducts([...products]);
-			}
-		}
-	};
+	useEffect(() => {
+		const resFromLs = isInLs("cartitems");
+		resFromLs && setCartItems(resFromLs);
+	}, []);
+
+	useEffect(() => {
+		updateLs("cartitems", "", cartItems);
+	}, [cartItems]);
 
 	const value = {
-		total,
-		products,
-		getItemById,
-		deleteItem,
+		cartItems,
+		setCartItems,
 		addItem,
 		removeItem,
-		setManualQty,
+		deleteItemFromCart,
 		clearCart,
 		get cartIndicator() {
-			return [...products].reduce((acc, val) => {
+			return cartItems.reduce((acc, val) => {
 				return acc + val.qty;
 			}, 0);
 		},

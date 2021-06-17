@@ -7,10 +7,12 @@ import styles from "./ThemeSwitcher.module.scss";
 const themes = {
 	light: {
 		"--primary": "#ffffff",
-		"--secondary": "#d62828",
+		"--secondary": "#1d3557",
 		"--green": "#06d6a0",
 		"--red": "#d62828",
 		"--yellow": "#ffbe0b",
+		"--dark": "#1d3557",
+		"--light": "#ffffff",
 	},
 	dark: {
 		"--primary": "#1d3557",
@@ -18,13 +20,15 @@ const themes = {
 		"--green": "#06d6a0",
 		"--red": "#d62828",
 		"--yellow": "#ffbe0b",
+		"--dark": "#1d3557",
+		"--light": "#ffffff",
 	},
 };
 
 const getInitialTheme = () => {
 	let theme;
 	let defaultTheme = "light";
-	let cachedTheme = localStorage.getItem("e-shop-demo-theme");
+	let cachedTheme = localStorage.getItem("shopito-theme");
 	let agentTheme = window.matchMedia("(prefer-color-scheme: dark)").matches ? "dark" : "light";
 
 	if (cachedTheme === "light" || cachedTheme === "dark") {
@@ -39,7 +43,7 @@ const getInitialTheme = () => {
 	for (const color in themeObject) {
 		document.documentElement.style.setProperty(color, themeObject[color]);
 	}
-	localStorage.setItem("e-shop-demo-theme", theme);
+	localStorage.setItem("shopito-theme", theme);
 	return theme;
 };
 
@@ -49,7 +53,7 @@ function ThemeSwitcher(props) {
 	const handleThemeSwitch = () => {
 		setTheme((state) => {
 			const selectedTheme = theme === "light" ? "dark" : "light";
-			localStorage.setItem("e-shop-demo-theme", selectedTheme);
+			localStorage.setItem("shopito-theme", selectedTheme);
 			const themeObject = themes[selectedTheme];
 			for (const color in themeObject) {
 				document.documentElement.style.setProperty(color, themeObject[color]);

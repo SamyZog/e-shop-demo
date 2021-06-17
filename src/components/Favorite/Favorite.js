@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Star } from "../../assets/icons/star.svg";
+import { ReactComponent as Fav } from "../../assets/icons/fav.svg";
 import { useData } from "../../context/DataProvider";
 import { useFavorite } from "../../context/FavoriteProvider";
 import Indicator from "../Indicator/Indicator";
@@ -14,7 +14,7 @@ function Favorite(props) {
 	return (
 		<div className={styles.Favorite}>
 			<Link to={data.links.favorites}>
-				<Star />
+				<Fav />
 				<Indicator length={favoriteIndicator} />
 			</Link>
 		</div>

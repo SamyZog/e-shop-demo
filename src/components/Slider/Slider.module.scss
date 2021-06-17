@@ -13,7 +13,7 @@
 			position: absolute;
 			height: 100%;
 			width: var(--i-l);
-			background-color: transparent;
+			background-color: var(--primary);
 			border: none;
 			z-index: 10;
 
@@ -36,7 +36,7 @@
 
 	&__images {
 		display: flex;
-		transition-duration: 500ms;
+		transition-duration: 1000ms;
 
 		a {
 			display: inline-block;

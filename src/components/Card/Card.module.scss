@@ -1,0 +1,44 @@
+.Card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: var(--g-s);
+	background-color: var(--light);
+	padding: var(--p-l);
+
+	&__image {
+		width: 17rem;
+		height: 17rem;
+		object-fit: contain;
+	}
+
+	&__title {
+		a {
+			color: var(--dark);
+		}
+	}
+
+	&__category {
+		text-transform: capitalize;
+		color: var(--yellow);
+	}
+
+	&__price {
+		color: var(--dark);
+	}
+
+	&__divider {
+		width: 100%;
+		border-top: 2px solid var(--dark);
+	}
+
+	&__buttons {
+		width: 100%;
+		display: flex;
+
+		button:nth-child(2) {
+			flex: 1;
+		}
+	}
+}

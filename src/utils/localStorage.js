@@ -1,43 +1,48 @@
 const APP_CACHE_NAME = "shopito-app-cache";
 
-const setInitialCache = () => {
+const _setInitialLs = () => {
 	const cache = {
 		categories: [],
-		cart: [],
+		items: {},
+		cartitems: [],
 		favorites: [],
-		products: [],
+		theme: "",
 	};
 	localStorage.setItem(APP_CACHE_NAME, JSON.stringify(cache));
 };
 
-const checkCache = () => {
-	return localStorage.getItem(APP_CACHE_NAME);
-};
-
-const getSpecificCacheItem = (key) => {
-	if (!checkCache()) {
-		return false;
-	} else {
-		const parsedCache = JSON.parse(checkCache());
-		if (key in parsedCache && parsedCache[key].length) {
-			return parsedCache[key];
-		} else {
-			return false;
+const isInLs = (key, slug) => {
+	const cache = localStorage.getItem(APP_CACHE_NAME);
+	if (cache && key in JSON.parse(cache)) {
+		const parsedCache = JSON.parse(cache);
+		switch (key) {
+			case "categories":
+			case "favorites":
+			case "cartitems":
+				return parsedCache[key].length && parsedCache[key];
+			case "items":
+				return parsedCache[key][slug] && parsedCache[key][slug].length && parsedCache[key][slug];
+			default:
+				break;
 		}
 	}
 };
 
-const overwriteCache = ({ key, payload }) => {
-	if (!checkCache()) {
-		setInitialCache();
+const updateLs = (key, slug, payload) => {
+	const cache = localStorage.getItem(APP_CACHE_NAME);
+	if (!cache) {
+		_setInitialLs();
 		return;
 	}
-	const parsedCache = JSON.parse(checkCache());
+	let parsedCache = JSON.parse(cache);
 	switch (key) {
 		case "categories":
 		case "favorites":
-		case "cart":
-			parsedCache[key] = payload;
+		case "cartitems":
+			parsedCache = { ...parsedCache, [key]: payload };
+			break;
+		case "items":
+			parsedCache[key] = { ...parsedCache[key], [slug]: payload };
 			break;
 		default:
 			break;
@@ -45,4 +50,4 @@ const overwriteCache = ({ key, payload }) => {
 	localStorage.setItem(APP_CACHE_NAME, JSON.stringify(parsedCache));
 };
 
-export { setInitialCache, getSpecificCacheItem, overwriteCache, checkCache };
+export { isInLs, updateLs };

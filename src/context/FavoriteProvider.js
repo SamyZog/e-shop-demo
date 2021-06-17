@@ -1,10 +1,20 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { isInLs, updateLs } from "../utils/localStorage";
 
 const favoriteContext = createContext();
 const { Provider: Favorite } = favoriteContext;
 
 function FavoriteProvider(props) {
 	const [favorites, setFavorites] = useState([]);
+
+	useEffect(() => {
+		const resFromLs = isInLs("favorites");
+		resFromLs && setFavorites(resFromLs);
+	}, []);
+
+	useEffect(() => {
+		updateLs("favorites", "", favorites);
+	}, [favorites]);
 
 	const handleFavorites = (liked, product) => {
 		if (liked) {
