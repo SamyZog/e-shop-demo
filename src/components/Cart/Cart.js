@@ -7,8 +7,8 @@ import Indicator from "../Indicator/Indicator";
 import styles from "./Cart.module.scss";
 
 function Cart(props) {
-	const { cartIndicator } = useCart();
 	const data = useData();
+	const { cartIndicator } = useCart();
 
 	return (
 		<div className={styles.Cart}>

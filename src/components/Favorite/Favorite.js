@@ -7,8 +7,9 @@ import Indicator from "../Indicator/Indicator";
 import styles from "./Favorite.module.scss";
 
 function Favorite(props) {
-	const { favoriteIndicator } = useFavorite();
 	const data = useData();
+
+	const { favoriteIndicator } = useFavorite();
 
 	return (
 		<div className={styles.Favorite}>

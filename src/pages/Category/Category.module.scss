@@ -1,31 +1,20 @@
 .Category {
-	height: var(--body-h);
+	min-height: var(--body-h);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--primary);
+	padding: var(--p-l);
 
-	aside {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		flex: 1;
-		background-color: blue;
+	&__list {
+		max-width: 100vw;
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		gap: var(--g-m);
+		padding: var(--g-m) 0;
 	}
 
-	.showcase {
-		flex: 5;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		ul {
-			display: grid;
-			grid-template-columns: repeat(3, 30rem);
-			grid-template-rows: 1fr;
-			gap: var(--g-l);
-			list-style-type: none;
-		}
+	&__listitem {
 	}
 }

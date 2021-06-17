@@ -2,13 +2,11 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--yellow);
+	text-align: center;
 	border-radius: 50%;
-	border: 1px solid var(--primary);
+	border: 1px solid var(--secondary);
+	background-color: var(--yellow);
+	color: var(--primary);
 	width: var(--i-xs);
 	height: var(--i-xs);
-	color: var(--primary);
 }

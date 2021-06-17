@@ -3,9 +3,10 @@
 	--body-h: calc(100vh - var(--header-h));
 
 	--i-xs: 1.5rem;
-	--i-s: 2rem;
+	--i-s: 2.5rem;
 	--i-m: 3rem;
 	--i-l: 4rem;
+	--i-xl: 6rem;
 
 	--br: 5px;
 
@@ -16,4 +17,9 @@
 	--g-s: 1rem;
 	--g-m: 2rem;
 	--g-l: 3rem;
+
+	--t-xs: 1rem;
+	--t-s: 1.5rem;
+	--t-m: 2rem;
+	--t-l: 3rem;
 }

@@ -10,8 +10,8 @@ import "./styles/main.scss";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<CacheProvider>
-			<DataProvider>
+		<DataProvider>
+			<CacheProvider>
 				<CartProvider>
 					<FavoriteProvider>
 						<Router>
@@ -19,8 +19,8 @@ ReactDOM.render(
 						</Router>
 					</FavoriteProvider>
 				</CartProvider>
-			</DataProvider>
-		</CacheProvider>
+			</CacheProvider>
+		</DataProvider>
 	</React.StrictMode>,
 	document.getElementById("root"),
 );

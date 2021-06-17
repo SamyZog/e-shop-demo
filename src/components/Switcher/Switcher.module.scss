@@ -1,7 +1,8 @@
 .Switcher {
 	cursor: pointer;
 	display: flex;
-	input {
+
+	&__checkbox {
 		appearance: none;
 	}
 }

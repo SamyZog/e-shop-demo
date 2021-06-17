@@ -9,7 +9,14 @@ function Switcher(props) {
 	return (
 		<label className={styles.Switcher}>
 			{props.render()}
-			<input type="checkbox" name="" id="" checked={props.state} onChange={handleCheck} />
+			<input
+				className={styles.Switcher__checkbox}
+				type="checkbox"
+				name=""
+				id=""
+				checked={props.state}
+				onChange={handleCheck}
+			/>
 		</label>
 	);
 }

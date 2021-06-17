@@ -6,26 +6,18 @@ import styles from "./ThemeSwitcher.module.scss";
 
 const themes = {
 	light: {
-		"--primary-common": "#ffffff",
-		"--secondary-common": "#353535",
 		"--primary": "#ffffff",
-		"--secondary": "#353535",
-		"--yellow": "#FEDB41",
-		"--aqua": "#00EFD1",
-		"--blue": "#00ACEA",
-		"--red": "#e63946",
-		"--green": "#2a9d8f",
+		"--secondary": "#d62828",
+		"--green": "#06d6a0",
+		"--red": "#d62828",
+		"--yellow": "#ffbe0b",
 	},
 	dark: {
-		"--primary-common": "#ffffff",
-		"--secondary-common": "#353535",
-		"--primary": "#353535",
+		"--primary": "#1d3557",
 		"--secondary": "#ffffff",
-		"--yellow": "#FEDB41",
-		"--aqua": "#00EFD1",
-		"--blue": "#00ACEA",
-		"--red": "#e63946",
-		"--green": "#2a9d8f",
+		"--green": "#06d6a0",
+		"--red": "#d62828",
+		"--yellow": "#ffbe0b",
 	},
 };
 

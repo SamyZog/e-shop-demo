@@ -1,11 +1,15 @@
-import { createContext, useContext } from "react";
+import { createContext, memo, useContext } from "react";
 
 const data = {
 	appname: "Shopito",
+	text: {
+		about: "about",
+		contact: "contact",
+	},
 	placeholders: {
-		search: "Search...",
-		addbutton: "Add to cart",
-		addmore: "In cart",
+		search: "search...",
+		addbutton: "add to cart",
+		addmore: "in cart",
 	},
 	titles: {
 		search: "search",
@@ -16,7 +20,10 @@ const data = {
 		home: "/",
 		cart: "/cart",
 		favorites: "/favorites",
-		product: "/product/:slug",
+		product: "/product",
+		category: "/category",
+		checkout: "/checkout",
+		about: "/about",
 	},
 };
 
@@ -30,4 +37,4 @@ function DataProvider(props) {
 const useData = () => useContext(dataContext);
 
 export { useData };
-export default DataProvider;
+export default memo(DataProvider);

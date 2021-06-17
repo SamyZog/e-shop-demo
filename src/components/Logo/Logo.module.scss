@@ -1,16 +1,21 @@
 .Logo {
-	display: inline-block;
-	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 
 	a {
-		height: inherit;
-		display: inline-block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--secondary);
+		text-decoration: none;
+		gap: var(--g-s);
 
 		svg {
 			display: block;
-			height: inherit;
-			width: 100%;
-			fill: red;
+			height: var(--i-l);
+			width: var(--i-l);
+			fill: var(--secondary);
 		}
 	}
 }
