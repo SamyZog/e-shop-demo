@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../../assets/icons/arrow.svg";
+import { useData } from "../../context/DataProvider";
 import styles from "./Slider.module.scss";
 
 function Slider(props) {
+	const data = useData();
 	const { images, categories } = props;
 	const [imageIndex, setImageIndex] = useState(0);
+	const [[initialX, delta], setCoords] = useState([0, 0]);
 
 	const windowRef = useRef({});
 	const intervalIdRef = useRef();
@@ -29,9 +32,26 @@ function Slider(props) {
 		clearInterval(intervalIdRef.current);
 	};
 
+	const handleTouchStart = (e) => {
+		setCoords((state) => [e.changedTouches[0].clientX, state[1]]);
+	};
+
+	const handleTouchMove = (e) => {
+		setCoords((state) => [state[0], e.changedTouches[0].clientX]);
+	};
+
+	const handleTouchEnd = () => {
+		initialX - delta > 0 ? moveForwards() : moveBackwards();
+	};
+
 	return (
 		<div className={styles.Slider}>
-			<div className={styles.Slider__window} ref={windowRef}>
+			<div
+				className={styles.Slider__window}
+				ref={windowRef}
+				onTouchStart={handleTouchStart}
+				onTouchMove={handleTouchMove}
+				onTouchEnd={handleTouchEnd}>
 				<button onClick={moveForwards} className={styles.Slider__forward}>
 					{<Arrow />}
 				</button>
@@ -44,13 +64,22 @@ function Slider(props) {
 						width: `calc(${images.length} * 100%)`,
 						transform: `translateX(-${windowRef.current.offsetWidth * imageIndex}px)`,
 					}}>
-					{images.map((image, i) => {
-						return (
-							<Link key={image} to={`/${categories[i]}`}>
-								<img className={styles.Slider__image} src={image} alt={categories[i]} />
-							</Link>
-						);
-					})}
+					{categories &&
+						categories.length &&
+						images.map((image, i) => {
+							return (
+								<div
+									key={image}
+									className={styles.Slider__slide}
+									style={{ backgroundImage: `url(${image})` }}>
+									<h1>
+										<Link to={`${data.links.category}/${categories[i]}`}>
+											{categories[i].toUpperCase()}
+										</Link>
+									</h1>
+								</div>
+							);
+						})}
 				</div>
 			</div>
 		</div>

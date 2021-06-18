@@ -1,0 +1,47 @@
+.CartItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--light);
+	padding: var(--p-l);
+
+	&__image {
+		width: 12rem;
+		height: 12rem;
+		object-fit: contain;
+	}
+
+	&__title {
+		a {
+			color: var(--dark);
+		}
+	}
+
+	&__category {
+		a {
+			color: var(--yellow);
+		}
+	}
+
+	&__price {
+		color: var(--dark);
+	}
+
+	&__qty {
+	}
+
+	&__total {
+		color: var(--green);
+	}
+
+	&__buttons {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	&__clearItemButton {
+		background-color: var(--yellow);
+		color: var(--light);
+		padding: 0 var(--p-s);
+	}
+}

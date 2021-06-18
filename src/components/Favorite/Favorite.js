@@ -14,7 +14,7 @@ function Favorite(props) {
 	return (
 		<div className={styles.Favorite}>
 			<Link to={data.links.favorites}>
-				<Fav />
+				{props.children || <Fav />}
 				<Indicator length={favoriteIndicator} />
 			</Link>
 		</div>

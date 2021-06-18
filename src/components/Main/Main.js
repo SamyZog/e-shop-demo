@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { useData } from "../../context/DataProvider";
-import About from "../../pages/About/About";
 import Cart from "../../pages/Cart/Cart";
 import Category from "../../pages/Category/Category";
 import Contact from "../../pages/Contact/Contact";
@@ -20,9 +19,8 @@ function Main(props) {
 				<Route path={data.links.favorites} component={Favorites} />
 				<Route path={`${data.links.product}/:slug`} component={Product} />
 				<Route path={data.links.cart} component={Cart} />
-				<Route path={`${data.links.about}`} component={About} />
 				<Route path={`${data.links.contact}`} component={Contact} />
-				<Route path={`/:slug`} component={Category} />
+				<Route path={`${data.links.category}/:slug`} component={Category} />
 			</Switch>
 		</main>
 	);

@@ -1,5 +1,4 @@
 .Slider {
-	height: inherit;
 	width: inherit;
 
 	&__window {
@@ -37,11 +36,24 @@
 	&__images {
 		display: flex;
 		transition-duration: 1000ms;
+	}
+
+	&__slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: var(--body-h);
+		width: 100%;
+		background-position: center;
+		background-size: cover;
 
 		a {
-			display: inline-block;
-			height: var(--body-h);
-			width: 100%;
+			text-align: center;
+			font-size: 5rem;
+			color: var(--secondary);
+			background-color: var(--primary);
+			padding: var(--p-s) var(--p-l);
+			text-decoration: none;
 		}
 	}
 
@@ -50,5 +62,27 @@
 		object-position: center;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.Slider {
+		a {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.Slider {
+		&__window {
+			button {
+				display: none;
+			}
+		}
+
+		a {
+			font-size: 2rem;
+		}
 	}
 }

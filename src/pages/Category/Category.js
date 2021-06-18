@@ -5,6 +5,7 @@ import jewelryImg from "../../assets/images/jewelry.jpg";
 import menFashionImg from "../../assets/images/menfashion.jpg";
 import womenFashionImg from "../../assets/images/womenfashion.jpg";
 import Card from "../../components/Card/Card";
+import PageBanner from "../../components/PageBanner/PageBanner";
 import { useFetch } from "../../hooks/useFetch";
 import styles from "./Category.module.scss";
 
@@ -38,26 +39,16 @@ function Category(props) {
 
 	return (
 		<section className={styles.Category}>
-			<div
-				className={styles.Category__banner}
-				style={{
-					backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${imgSrc})`,
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-				}}>
-				<h1 className={styles.Category__heading}>{slug.toUpperCase()}</h1>
-			</div>
-			<div className={styles.Category__listContainer}>
-				<ul className={styles.Category__list}>
-					{res.map((preview) => {
-						return (
-							<li className={styles.Category__listItem} key={preview.id}>
-								<Card preview={preview} />
-							</li>
-						);
-					})}
-				</ul>
-			</div>
+			<PageBanner imgSrc={imgSrc}>{slug.toUpperCase()}</PageBanner>
+			<ul className={styles.Category__list}>
+				{res.map((preview) => {
+					return (
+						<li className={styles.Category__listItem} key={preview.id}>
+							<Card preview={preview} />
+						</li>
+					);
+				})}
+			</ul>
 		</section>
 	);
 }

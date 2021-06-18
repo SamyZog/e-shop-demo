@@ -8,7 +8,7 @@ import { useFavorite } from "../../context/FavoriteProvider";
 import styles from "./Button.module.scss";
 
 function Button(props) {
-	const { type, item } = props;
+	const { type, item, incart } = props;
 	const { favorites, handleFavorites } = useFavorite();
 	const { cartItems, addItem, removeItem } = useCart();
 	const [liked, setLiked] = useState(false);
@@ -41,7 +41,7 @@ function Button(props) {
 		<>
 			{type === "add" && (
 				<button className={styles.AddButton} onClick={handleAddItem}>
-					{(currentItem && currentItem.qty) || <Add />}
+					{incart ? <Add /> : (currentItem && currentItem.qty) || <Add />}
 				</button>
 			)}
 			{!currentItem || !currentItem.qty
@@ -51,9 +51,9 @@ function Button(props) {
 							<Remove />
 						</button>
 				  )}
-			{type === "clear" && <button className={styles.ClearButton}>{props.children}</button>}
+			{type === "clearcart" && <button className={styles.ClearButton}>{props.children}</button>}
 			{type === "favorite" && (
-				<button onClick={handleLike} className={styles.FavoriteButton}>
+				<button className={styles.FavoriteButton} onClick={handleLike}>
 					{liked ? <Star /> : <EmptyStar />}
 				</button>
 			)}

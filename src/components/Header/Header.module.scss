@@ -33,4 +33,85 @@
 		align-items: center;
 		gap: var(--g-l);
 	}
+
+	&__mobileSettings {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		display: none;
+		gap: var(--g-l);
+	}
+
+	&__menuButton {
+		width: var(--i-m);
+		height: var(--i-m);
+		background-color: transparent;
+		display: none;
+
+		svg {
+			fill: var(--secondary);
+			width: var(--i-m);
+			height: var(--i-m);
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.Header {
+		gap: var(--g-l);
+
+		a {
+			svg {
+				width: var(--i-m);
+				height: var(--i-m);
+			}
+		}
+
+		&__nav {
+			appearance: none;
+		}
+
+		&__list {
+			font-size: var(--t-xs);
+		}
+
+		&__appsettings {
+			gap: var(--g-s);
+			a {
+				svg {
+					width: var(--i-s);
+					height: var(--i-s);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.Header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__mobileSettings {
+			display: flex;
+		}
+
+		&__menuButton {
+			display: block;
+		}
+
+		&__nav,
+		&__appsettings {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.Header {
+		&__mobileSettings {
+			gap: var(--g-s);
+		}
+	}
 }

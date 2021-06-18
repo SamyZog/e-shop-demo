@@ -13,7 +13,7 @@ function Cart(props) {
 	return (
 		<div className={styles.Cart}>
 			<Link to={data.links.cart}>
-				<ShoppingCart />
+				{props.children || <ShoppingCart />}
 				<Indicator length={cartIndicator} />
 			</Link>
 		</div>

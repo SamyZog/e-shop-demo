@@ -1,5 +1,5 @@
 :root {
-	--header-h: 10vh;
+	--header-h: 10rem;
 	--body-h: calc(100vh - var(--header-h));
 
 	--i-xs: 1.5rem;
@@ -22,4 +22,11 @@
 	--t-s: 1.5rem;
 	--t-m: 2rem;
 	--t-l: 3rem;
+}
+
+@media screen and (max-width: 770px) {
+	:root {
+		--header-h: 7.5rem;
+		--body-h: calc(100vh - var(--header-h));
+	}
 }

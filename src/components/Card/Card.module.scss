@@ -42,3 +42,17 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.Card {
+		&__image {
+			width: 13rem;
+			height: 13rem;
+			object-fit: contain;
+		}
+
+		&__title {
+			font-size: var(--t-xs);
+		}
+	}
+}

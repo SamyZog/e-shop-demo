@@ -1,0 +1,16 @@
+.PageBanner {
+	min-width: 250px;
+	height: var(--i-xl);
+	background-color: var(--secondary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--dark);
+	font-size: var(--t-m);
+}
+
+@media screen and (max-width: 550px) {
+	.PageBanner {
+		font-size: var(--t-s);
+	}
+}

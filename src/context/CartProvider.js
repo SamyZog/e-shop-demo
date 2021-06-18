@@ -19,11 +19,13 @@ function CartProvider(props) {
 		const isInCart = cartItems.find((el) => el.id === item.id);
 		if (isInCart) {
 			isInCart.qty = (isInCart.qty || 0) + 1;
+			isInCart.total = isInCart.qty * isInCart.price;
 			setCartItems((state) => [...state]);
 			return;
 		}
 		const copy = { ...item };
 		copy.qty = 1;
+		copy.total = copy.qty * copy.price;
 		setCartItems((state) => {
 			return [...state, copy];
 		});
@@ -32,6 +34,7 @@ function CartProvider(props) {
 	const removeItem = (item) => {
 		const isInCart = cartItems.find((el) => el.id === item.id);
 		isInCart.qty = (isInCart.qty || 0) - 1;
+		isInCart.total = isInCart.qty * isInCart.price;
 		if (isInCart.qty === 0) {
 			deleteItemFromCart(item);
 			return;

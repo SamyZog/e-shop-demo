@@ -10,3 +10,10 @@
 	width: var(--i-xs);
 	height: var(--i-xs);
 }
+
+@media screen and (max-width: 770px) {
+	.Indicator {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

@@ -21,7 +21,11 @@ const isInLs = (key, slug) => {
 			case "cartitems":
 				return parsedCache[key].length && parsedCache[key];
 			case "items":
-				return parsedCache[key][slug] && parsedCache[key][slug].length && parsedCache[key][slug];
+				if (parsedCache[key][slug] && parsedCache[key][slug].length) {
+					return parsedCache[key][slug];
+				} else {
+					return false;
+				}
 			default:
 				break;
 		}
