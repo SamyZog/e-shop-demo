@@ -29,7 +29,7 @@ I made this demo to have hands-on practical experience with React state manageme
   
 <h2 id="dev-phase">Development phase</h2>
 
-N.B: the /checkout, /favorites, /contact and /product/:slug routes are not yet finished.
+N.B: the /checkout, /favorites, /contact and /product/:id routes are not yet finished.
 
 I used the Fake Store API to get placeholder items for the demo.
 
