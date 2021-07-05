@@ -18,7 +18,7 @@ const data = {
 		dark: "dark",
 	},
 	links: {
-		home: "/",
+		home: "/e-shop-demo",
 		cart: "/cart",
 		favorites: "/favorites",
 		product: "/product",
