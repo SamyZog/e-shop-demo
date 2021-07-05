@@ -9,11 +9,11 @@
 - [Run locally](#run)
 - [Authors](#authors)
 
-<h2>KinoWiki</h2>
+<h2>E-shop demo</h2>
 
-This is a small project built on top of the [MovieDB API](https://www.themoviedb.org/) using [NextJS](https://nextjs.org/).
+This is a small project built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
 
-It is a web app that lets users search and find movies or actors, lookup similar movies to the ones searched for and view a perosn's filmography.
+It is a small e-shop with different categories of items.
 
 <h2 id="demo">Demo</h2>
 
