@@ -8,7 +8,7 @@ function Slider(props) {
 	const data = useData();
 	const { images, categories } = props;
 	const [imageIndex, setImageIndex] = useState(0);
-	const [[initialX, delta], setCoords] = useState([0, 0]);
+	const [[initialX, delta, moved], setCoords] = useState([0, 0, false]);
 
 	const windowRef = useRef({});
 	const intervalIdRef = useRef();
@@ -18,14 +18,14 @@ function Slider(props) {
 		return () => clearInterval(intervalIdRef.current);
 	}, [imageIndex]);
 
-	const moveForwards = () => {
+	const moveForwards = (e) => {
 		setImageIndex((state) => {
 			return state === images.length - 1 ? 0 : state + 1;
 		});
 		clearInterval(intervalIdRef.current);
 	};
 
-	const moveBackwards = () => {
+	const moveBackwards = (e) => {
 		setImageIndex((state) => {
 			return state === 0 ? images.length - 1 : state - 1;
 		});
@@ -33,15 +33,19 @@ function Slider(props) {
 	};
 
 	const handleTouchStart = (e) => {
-		setCoords((state) => [e.changedTouches[0].clientX, state[1]]);
+		setCoords((state) => [e.changedTouches[0].clientX, state[1], false]);
 	};
 
 	const handleTouchMove = (e) => {
-		setCoords((state) => [state[0], e.changedTouches[0].clientX]);
+		setCoords((state) => [state[0], e.changedTouches[0].clientX, true]);
 	};
 
-	const handleTouchEnd = () => {
-		initialX - delta > 0 ? moveForwards() : moveBackwards();
+	const handleTouchEnd = (e) => {
+		if (moved) {
+			initialX - delta >= 50 && moveForwards();
+			initialX - delta <= -50 && moveBackwards();
+		}
+		setCoords((state) => [0, 0, false]);
 	};
 
 	return (

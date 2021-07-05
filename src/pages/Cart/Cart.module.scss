@@ -5,12 +5,30 @@
 	flex-direction: column;
 	gap: var(--g-l);
 
+	&__toCheckout {
+		border-radius: 50%;
+		width: var(--i-l);
+		height: var(--i-l);
+		transform: rotate(90deg);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		bottom: var(--p-l);
+		right: var(--p-l);
+		background-color: var(--dark);
+		opacity: 0.5;
+		z-index: 10000;
+		display: none;
+	}
+
 	&__container {
 		display: flex;
+		gap: var(--g-m);
 	}
 
 	&__items {
-		flex: 5;
+		flex: 6;
 	}
 
 	&__list {
@@ -23,10 +41,13 @@
 	&__listItem {
 	}
 
+	&__aside {
+		flex: 2;
+	}
+
 	&__info {
 		top: 0;
 		position: sticky;
-		flex: 2;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -79,5 +100,65 @@
 
 	&__emptyText {
 		color: var(--secondary);
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.Cart {
+		&__totals {
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			gap: var(--g-l);
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.Cart {
+		&__toCheckout {
+			display: block;
+		}
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			gap: var(--g-m);
+		}
+
+		&__aside {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__info {
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.Cart {
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--g-l);
+		}
+
+		&__info {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.Cart {
+		padding: var(--p-l) 0;
+
+		&__list {
+			grid-template-columns: 1fr;
+			gap: var(--g-l);
+		}
 	}
 }

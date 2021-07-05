@@ -45,3 +45,16 @@
 		padding: 0 var(--p-s);
 	}
 }
+
+@media screen and (max-width: 770px) {
+	.CartItem {
+		flex-direction: column;
+		gap: var(--g-s);
+
+		&__buttons {
+			display: grid;
+			grid-template-columns: 1fr 5fr 1fr;
+			grid-template-rows: auto;
+		}
+	}
+}
