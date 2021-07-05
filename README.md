@@ -40,50 +40,32 @@ Concerning the app's functionality and logic, it was pretty straight-forward in 
 
 <h2 id="deps">Tech Stack / Dependencies</h2>
 
-- [NextJS](https://nextjs.org/)
 - [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
 - [Sass](https://sass-lang.com/)
-- [Axios](https://github.com/axios/axios)
-- [SWR](https://swr.vercel.app/)
-- [uuid](https://www.npmjs.com/package/uuid)
 
   
 <h2 id="features">Features</h2>
 
-- Light/dark mode toggle
-- Display language toggle (ru, en)
-- Search functionality (movies, actors)
-- Pagination for movie search results (the link to the pagination page is appended to the search result list)
-- Custom 404 page
-- Movies slider (top 10 trending movies)
+- Light/dark mode toggle (persisted)
+- Add items to cart / favorites
+- Cart and favorites are persisted locally
+- Category slider
 - Responsive design (grid, flexbox)
-- Sorting movies by year, by genre, by popularity and alphabetically   
 
   
 <h2 id="run">Run Locally</h2>
 
-To run the project locally you have to provide your own MovieDB API key.
-
 Clone the project
 
 ```bash
-  git clone https://github.com/SamyZog/kinowiki
+  git clone https://github.com/SamyZog/e-shop-demo
 ```
 
 Go to the project directory
 
 ```bash
-  cd kinowiki
-```
-
-Create .env.local file and add your api key
-
-```bash
-  echo "TMDB_API_KEY=<<your_api_key>>" > .env.local
-```
-
-```bash
-  echo "NEXT_PUBLIC_TMDB_API_KEY=<<your_api_key>>" >> .env.local"
+  cd e-shop-demo
 ```
 
 Install dependencies
@@ -95,7 +77,7 @@ Install dependencies
 Start the server
 
 ```bash
-  npm run start
+  npm start
 ```
 
   
