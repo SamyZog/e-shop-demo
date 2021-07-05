@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/e-shop-demo/static/css/main.82072670.chunk.css",
+    "main.js": "/e-shop-demo/static/js/main.1f71e3c8.chunk.js",
+    "main.js.map": "/e-shop-demo/static/js/main.1f71e3c8.chunk.js.map",
+    "runtime-main.js": "/e-shop-demo/static/js/runtime-main.0071ac7c.js",
+    "runtime-main.js.map": "/e-shop-demo/static/js/runtime-main.0071ac7c.js.map",
+    "static/js/2.98c929ce.chunk.js": "/e-shop-demo/static/js/2.98c929ce.chunk.js",
+    "static/js/2.98c929ce.chunk.js.map": "/e-shop-demo/static/js/2.98c929ce.chunk.js.map",
+    "index.html": "/e-shop-demo/index.html",
+    "static/css/main.82072670.chunk.css.map": "/e-shop-demo/static/css/main.82072670.chunk.css.map",
+    "static/js/2.98c929ce.chunk.js.LICENSE.txt": "/e-shop-demo/static/js/2.98c929ce.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/e-shop-demo/static/media/Ubuntu-Regular.e60cd03d.woff",
+    "static/media/add.965dc6cb.svg": "/e-shop-demo/static/media/add.965dc6cb.svg",
+    "static/media/arrow.e8a66a67.svg": "/e-shop-demo/static/media/arrow.e8a66a67.svg",
+    "static/media/cart.861395e0.svg": "/e-shop-demo/static/media/cart.861395e0.svg",
+    "static/media/electronics.6856906d.jpg": "/e-shop-demo/static/media/electronics.6856906d.jpg",
+    "static/media/emptystar.ade9e9b3.svg": "/e-shop-demo/static/media/emptystar.ade9e9b3.svg",
+    "static/media/fav.5436dbbe.svg": "/e-shop-demo/static/media/fav.5436dbbe.svg",
+    "static/media/jewelry.927d651f.jpg": "/e-shop-demo/static/media/jewelry.927d651f.jpg",
+    "static/media/menfashion.5e25ac36.jpg": "/e-shop-demo/static/media/menfashion.5e25ac36.jpg",
+    "static/media/menu.4f9322f9.svg": "/e-shop-demo/static/media/menu.4f9322f9.svg",
+    "static/media/moon.9fa353d7.svg": "/e-shop-demo/static/media/moon.9fa353d7.svg",
+    "static/media/remove.beb1f22b.svg": "/e-shop-demo/static/media/remove.beb1f22b.svg",
+    "static/media/shop.c8b45afd.svg": "/e-shop-demo/static/media/shop.c8b45afd.svg",
+    "static/media/star.07ce4055.svg": "/e-shop-demo/static/media/star.07ce4055.svg",
+    "static/media/sun.919fd8c1.svg": "/e-shop-demo/static/media/sun.919fd8c1.svg",
+    "static/media/womenfashion.424bb9b9.jpg": "/e-shop-demo/static/media/womenfashion.424bb9b9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0071ac7c.js",
+    "static/js/2.98c929ce.chunk.js",
+    "static/css/main.82072670.chunk.css",
+    "static/js/main.1f71e3c8.chunk.js"
+  ]
+}
