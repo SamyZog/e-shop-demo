@@ -21,6 +21,10 @@ It is a small e-shop with different categories of items.
 <h2 id="host">Hosting</h2>
 
 This web app is hosted on [Github Pages](https://pages.github.com/)
+
+<h2 id="motivation">Motivation</h2>
+
+I made this demo to have hands-on practical experience with React state management, React Router, using hooks and custom hooks, context API and data fetching.
   
 <h2 id="dev-phase">Development phase</h2>
 
