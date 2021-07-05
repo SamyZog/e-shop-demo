@@ -32,9 +32,9 @@ It is made as a potfolio project to showcase to recruiters.
 
 <h2 id="dev-phase">Development phase</h2>
 
-I used the Fake Store API to get placeholder items for the demo, the /favorites and /contact are unfinished.
+N.B: the /favorites, /contact and /product/:slug routes are unfinished.
 
-I did not encounter any difficulties creating this demo, applying my own styling took the most time.
+I used the Fake Store API to get placeholder items for the demo.
 
 The caching mechanism for the fetch requests is done using local storage, which is not ideal I know :), but the amount of data fetched is very small and this is just a small demo.
 
