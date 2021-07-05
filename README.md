@@ -2,6 +2,7 @@
 
 - [Demo](#demo)
 - [Hosting](#host)
+- [Motivation](#motivation)
 - [Development phase](#dev-phase)
 - [Tech Stack / Dependencies](#deps)
 - [Features](#features)
