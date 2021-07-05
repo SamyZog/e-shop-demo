@@ -17,11 +17,11 @@ It is a small e-shop with different categories of items.
 
 <h2 id="demo">Demo</h2>
 
-[KinoWIKI](https://kinowiki.vercel.app/)
+[E-shop demo](https://samyzog.github.io/e-shop-demo/)
 
 <h2 id="host">Hosting</h2>
 
-This web app is hosted on [Vercel](https://vercel.com/)
+This web app is hosted on [Github Pages](https://pages.github.com/)
   
 <h2 id="motivation">Motivation</h2>
 
