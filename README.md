@@ -2,7 +2,6 @@
 
 - [Demo](#demo)
 - [Hosting](#host)
-- [Motivation](#motivation)
 - [Development phase](#dev-phase)
 - [Tech Stack / Dependencies](#deps)
 - [Features](#features)
@@ -23,13 +22,6 @@ It is a small e-shop with different categories of items.
 
 This web app is hosted on [Github Pages](https://pages.github.com/)
   
-<h2 id="motivation">Motivation</h2>
-
-This is my first ever project since I started learning front-end development.
-
-It is made as a potfolio project to showcase to recruiters. 
-
-
 <h2 id="dev-phase">Development phase</h2>
 
 N.B: the /favorites, /contact and /product/:slug routes are unfinished.
