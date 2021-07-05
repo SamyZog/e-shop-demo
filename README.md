@@ -32,11 +32,13 @@ It is made as a potfolio project to showcase to recruiters.
 
 <h2 id="dev-phase">Development phase</h2>
 
-This was not a particularily difficult project to create.
+I used the Fake Store API to get placeholder items for the demo, the /favorites and /contact are unfinished.
 
-The most time consuming aspect of the project was figuring out the file structure, maintinaining component re-usability and applying styling and responsiveness.
+I did not encounter any difficulties creating this demo, applying my own styling took the most time.
 
-Concerning the app's functionality and logic, it was pretty straight-forward in implementation. By leveraging the SSR and SSG and the MovieDB API coupled with SWR's automatic request caching, it was an overall pleasant experience and I enjoyed my time working on it. 
+The caching mechanism for the fetch requests is done using local storage, which is not ideal I know :), but the amount of data fetched is very small and this is just a small demo.
+
+I used React's context API to control Cart and Favorites component logic.
 
 <h2 id="deps">Tech Stack / Dependencies</h2>
 
@@ -48,8 +50,7 @@ Concerning the app's functionality and logic, it was pretty straight-forward in 
 <h2 id="features">Features</h2>
 
 - Light/dark mode toggle (persisted)
-- Add items to cart / favorites
-- Cart and favorites are persisted locally
+- Add items to cart / favorites (persisted)
 - Category slider
 - Responsive design (grid, flexbox)
 
