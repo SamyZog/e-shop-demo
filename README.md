@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Index
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Demo](#demo)
+- [Hosting](#host)
+- [Motivation](#motivation)
+- [Development phase](#dev-phase)
+- [Tech Stack / Dependencies](#deps)
+- [Features](#features)
+- [Run locally](#run)
+- [Authors](#authors)
 
-## Available Scripts
+<h2>KinoWiki</h2>
 
-In the project directory, you can run:
+This is a small project built on top of the [MovieDB API](https://www.themoviedb.org/) using [NextJS](https://nextjs.org/).
 
-### `npm start`
+It is a web app that lets users search and find movies or actors, lookup similar movies to the ones searched for and view a perosn's filmography.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2 id="demo">Demo</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[KinoWIKI](https://kinowiki.vercel.app/)
 
-### `npm test`
+<h2 id="host">Hosting</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This web app is hosted on [Vercel](https://vercel.com/)
+  
+<h2 id="motivation">Motivation</h2>
 
-### `npm run build`
+This is my first ever project since I started learning front-end development.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It is made as a potfolio project to showcase to recruiters. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2 id="dev-phase">Development phase</h2>
 
-### `npm run eject`
+This was not a particularily difficult project to create.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The most time consuming aspect of the project was figuring out the file structure, maintinaining component re-usability and applying styling and responsiveness.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Concerning the app's functionality and logic, it was pretty straight-forward in implementation. By leveraging the SSR and SSG and the MovieDB API coupled with SWR's automatic request caching, it was an overall pleasant experience and I enjoyed my time working on it. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h2 id="deps">Tech Stack / Dependencies</h2>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [NextJS](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Sass](https://sass-lang.com/)
+- [Axios](https://github.com/axios/axios)
+- [SWR](https://swr.vercel.app/)
+- [uuid](https://www.npmjs.com/package/uuid)
 
-## Learn More
+  
+<h2 id="features">Features</h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Light/dark mode toggle
+- Display language toggle (ru, en)
+- Search functionality (movies, actors)
+- Pagination for movie search results (the link to the pagination page is appended to the search result list)
+- Custom 404 page
+- Movies slider (top 10 trending movies)
+- Responsive design (grid, flexbox)
+- Sorting movies by year, by genre, by popularity and alphabetically   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
+<h2 id="run">Run Locally</h2>
 
-### Code Splitting
+To run the project locally you have to provide your own MovieDB API key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the project
 
-### Analyzing the Bundle Size
+```bash
+  git clone https://github.com/SamyZog/kinowiki
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Go to the project directory
 
-### Making a Progressive Web App
+```bash
+  cd kinowiki
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create .env.local file and add your api key
 
-### Advanced Configuration
+```bash
+  echo "TMDB_API_KEY=<<your_api_key>>" > .env.local
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+  echo "NEXT_PUBLIC_TMDB_API_KEY=<<your_api_key>>" >> .env.local"
+```
 
-### Deployment
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  npm install
+```
 
-### `npm run build` fails to minify
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  npm run start
+```
+
+  
+<h2 id="authors">Authors</h2>
+
+- [@SamyZog](https://www.github.com/SamyZog)
+
+  
