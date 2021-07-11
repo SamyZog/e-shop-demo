@@ -16,7 +16,7 @@
 
 This is a SPA built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
 
-<h2 id="remarks"></h2>
+<h2 id="remarks">Remarks</h2>
 
 N.B: the /checkout, /favorites, /contact and /product/:id routes are not yet finished.
 
