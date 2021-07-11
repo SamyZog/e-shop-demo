@@ -38,7 +38,7 @@ I used React's context API to control Cart and Favorites component logic.
 
 <h2 id="remarks">Remarks</h2>
 
-/checkout, /favorites, /contact and /product/:id routes are not yet finished.
+<code>/checkout</code>, <code>/favorites</code>, <code>/contact</code> and <code>/product/:id</code> routes are not yet finished.
 
 <h2 id="deps">Tech Stack / Dependencies</h2>
 
