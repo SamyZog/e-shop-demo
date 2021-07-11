@@ -3,11 +3,11 @@
 # Index
 
 - [Demo](#demo)
+- [Features](#features)
 - [Hosting](#host)
 - [Motivation](#motivation)
 - [Remarks](#remarks)
 - [Tech Stack / Dependencies](#deps)
-- [Features](#features)
 - [Run locally](#run)
 - [Authors](#authors)
 
@@ -20,6 +20,13 @@ The e-shop is not a full fledged store, this demo focuses on typical cart and fa
 <h2 id="demo">Demo</h2>
 
 [E-shop demo](https://samyzog.github.io/e-shop-demo/)
+
+<h2 id="features">Features</h2>
+
+- Light/dark mode toggle (cached)
+- Add items to cart / favorites (cached)
+- Category slider
+- Responsive design (grid, flexbox)
 
 <h2 id="host">Hosting</h2>
 
@@ -38,15 +45,6 @@ I made this demo to have hands-on practical experience with React state manageme
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
 - [Sass](https://sass-lang.com/)
-
-  
-<h2 id="features">Features</h2>
-
-- Light/dark mode toggle (cached)
-- Add items to cart / favorites (cached)
-- Category slider
-- Responsive design (grid, flexbox)
-
   
 <h2 id="run">Run Locally</h2>
 
