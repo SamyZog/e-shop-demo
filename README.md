@@ -13,7 +13,9 @@
 
 <h2>E-shop demo</h2>
 
-This is a SPA built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
+This is a single page e-shop built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
+
+The e-shop is not a full fledged store, this demo focuses on typical cart and favorites components. 
 
 <h2 id="demo">Demo</h2>
 
