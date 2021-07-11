@@ -48,8 +48,8 @@ I used React's context API to control Cart and Favorites component logic.
   
 <h2 id="features">Features</h2>
 
-- Light/dark mode toggle (persisted)
-- Add items to cart / favorites (persisted)
+- Light/dark mode toggle (cached)
+- Add items to cart / favorites (cached)
 - Category slider
 - Responsive design (grid, flexbox)
 
