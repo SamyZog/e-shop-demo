@@ -34,7 +34,7 @@ I used the Fake Store API to get placeholder items for the demo.
 
 The caching mechanism for the fetch requests is done using local storage, which is not ideal I know :), but the amount of data fetched is very small and this is just a small demo.
 
-I used React's context API to control <code><Cart/></code> and <code><Favorites/></code> component logic.
+I used React's context API to control <code>	&lt;Cart/&gt;</code> and <code>&lt;Favorites/&gt;</code> component logic.
 
 <h2 id="remarks">Remarks</h2>
 
