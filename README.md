@@ -2,11 +2,11 @@
 
 # Index
 
-- [Remarks](#remarks)
 - [Demo](#demo)
 - [Hosting](#host)
 - [Motivation](#motivation)
 - [Challenges](#challenges)
+- [Remarks](#remarks)
 - [Tech Stack / Dependencies](#deps)
 - [Features](#features)
 - [Run locally](#run)
@@ -15,10 +15,6 @@
 <h2>E-shop demo</h2>
 
 This is a SPA built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
-
-<h2 id="remarks">Remarks</h2>
-
-N.B: the /checkout, /favorites, /contact and /product/:id routes are not yet finished.
 
 <h2 id="demo">Demo</h2>
 
@@ -39,6 +35,10 @@ I used the Fake Store API to get placeholder items for the demo.
 The caching mechanism for the fetch requests is done using local storage, which is not ideal I know :), but the amount of data fetched is very small and this is just a small demo.
 
 I used React's context API to control Cart and Favorites component logic.
+
+<h2 id="remarks">Remarks</h2>
+
+N.B: the /checkout, /favorites, /contact and /product/:id routes are not yet finished.
 
 <h2 id="deps">Tech Stack / Dependencies</h2>
 
