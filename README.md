@@ -2,10 +2,11 @@
 
 # Index
 
+- [Remarks](#remarks)
 - [Demo](#demo)
 - [Hosting](#host)
 - [Motivation](#motivation)
-- [Development phase](#dev-phase)
+- [Challenges](#challenges)
 - [Tech Stack / Dependencies](#deps)
 - [Features](#features)
 - [Run locally](#run)
@@ -13,9 +14,11 @@
 
 <h2>E-shop demo</h2>
 
-This is a small project built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
+This is a SPA built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
 
-It is a small e-shop with different categories of items.
+<h2 id="remarks"></h2>
+
+N.B: the /checkout, /favorites, /contact and /product/:id routes are not yet finished.
 
 <h2 id="demo">Demo</h2>
 
@@ -27,11 +30,9 @@ This web app is hosted on [Github Pages](https://pages.github.com/)
 
 <h2 id="motivation">Motivation</h2>
 
-I made this demo to have hands-on practical experience with React state management, React Router, using hooks and custom hooks, context API and data fetching.
-  
-<h2 id="dev-phase">Development phase</h2>
+I made this demo to have hands-on practical experience with React state management, React Router, using hooks and custom hooks, context API and data fetching. 
 
-N.B: the /checkout, /favorites, /contact and /product/:id routes are not yet finished.
+<h2 id="challenges">Challenges</h2>
 
 I used the Fake Store API to get placeholder items for the demo.
 
