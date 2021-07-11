@@ -5,7 +5,6 @@
 - [Demo](#demo)
 - [Hosting](#host)
 - [Motivation](#motivation)
-- [Challenges](#challenges)
 - [Remarks](#remarks)
 - [Tech Stack / Dependencies](#deps)
 - [Features](#features)
@@ -27,14 +26,6 @@ This web app is hosted on [Github Pages](https://pages.github.com/)
 <h2 id="motivation">Motivation</h2>
 
 I made this demo to have hands-on practical experience with React state management, React Router, using hooks and custom hooks, context API and data fetching. 
-
-<h2 id="challenges">Challenges</h2>
-
-I used the Fake Store API to get placeholder items for the demo.
-
-The caching mechanism for the fetch requests is done using local storage, which is not ideal I know :), but the amount of data fetched is very small and this is just a small demo.
-
-I used React's context API to control <code>	&lt;Cart/&gt;</code> and <code>&lt;Favorites/&gt;</code> component logic.
 
 <h2 id="remarks">Remarks</h2>
 
