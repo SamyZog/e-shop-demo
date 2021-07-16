@@ -2,6 +2,7 @@
 
 # Index
 
+- [Title](#title)
 - [Demo](#demo)
 - [Features](#features)
 - [Hosting](#host)
@@ -11,7 +12,7 @@
 - [Run locally](#run)
 - [Authors](#authors)
 
-<h2>E-shop demo</h2>
+<h2 id="title">E-shop demo</h2>
 
 This is a single page e-shop built on top of the [Fake Store API](https://fakestoreapi.com/) using [Create React App](https://github.com/facebook/create-react-app).
 
